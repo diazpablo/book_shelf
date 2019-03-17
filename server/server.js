@@ -182,7 +182,7 @@ app.delete('/api/delete_book', (req, res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-    const path = requier('path');
+    const path = require('path');
     app.get('/*', (req, res) => {
         res.sendfile(path.resolve(__direname, '../client', 'build', 'index.html'));
     });
